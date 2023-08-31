@@ -1,0 +1,37 @@
+{{ block "formField" . }}
+    <div hx-target="this" hx-swap="outerHTML">
+        <label for="{{ .Id }}"
+               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ .LabelText }}</label>
+        <input type="{{ .Type }}" name="{{ .Name }}" id="{{ .Id }}" hx-post="{{ .QueryURI }}/{{ .Id }}"
+               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+               placeholder="{{ .Placeholder }}" required>
+    </div>
+{{ end }}
+{{ block "formFieldNoValidation" . }}
+    <div>
+        <label for="{{ .Id }}"
+               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ .LabelText }}</label>
+        <input type="{{ .Type }}" name="{{ .Name }}" id="{{ .Id }}"
+               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+               placeholder="{{ .Placeholder }}" required>
+    </div>
+{{ end }}
+{{ block "errorFormField" . }}
+    <div hx-target="this" hx-swap="outerHTML">
+        <label for="{{ .Id }}"
+               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ .LabelText }}</label>
+        <input type="{{ .Type }}" name="{{ .Name }}" id="{{ .Id }}" hx-post="{{ .QueryURI }}/{{ .Id }}"
+               class="bg-gray-50 border border-red-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-red-500 dark:placeholder-gray-400 dark:text-white"
+               placeholder="{{ .Placeholder }}" required value="{{ .Value }}">
+        <div class="text-red-400 dark:text-red-500 text-sm mt-1">{{ .Error }}</div>
+    </div>
+{{ end }}
+{{ block "validFormField" . }}
+    <div hx-target="this" hx-swap="outerHTML">
+        <label for="{{ .Id }}"
+               class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">{{ .LabelText }}</label>
+        <input type="{{ .Type }}" name="{{ .Name }}" id="{{ .Id }}" hx-post="{{ .QueryURI }}/{{ .Id }}"
+               class="bg-gray-50 border border-green-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-green-500 dark:placeholder-gray-400 dark:text-white"
+               placeholder="{{ .Placeholder }}" required value="{{ .Value }}">
+    </div>
+{{ end }}
