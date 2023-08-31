@@ -14,7 +14,7 @@
 
 {{ template "sidebar-inner" . }}
 
-<div id="main-page-content" hx-trigger="reloadMain" hx-get="/home" hx-target="this" hx-swap="innerHTML">
+<div id="main-page-content" class="h-screen w-screen" hx-trigger="reloadMain" hx-get="/home" hx-target="this" hx-swap="innerHTML">
     {{ if .IsAuthenticated }}
         {{ template "grid-page" . }}
     {{ else }}
