@@ -17,7 +17,7 @@
                 </button>
                 <div class="px-6 py-6 lg:px-8">
                     <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h3>
-                    <form _="on loggedInEvent from body trigger closeModal then send click to #main-page-content" class="space-y-6" hx-post="{{ .FormUri }}" {{if .Boost }}hx-boost="true" hx-target="#sidebar-placeholder"{{ end }} >
+                    <form _="on loggedInEvent from body trigger closeModal then send reloadMain to #main-page-content" class="space-y-6" hx-post="{{ .FormUri }}" {{if .Boost }}hx-boost="true" hx-target="#sidebar-placeholder"{{ end }} >
                         {{ range .ModalField }}
                             {{ if eq .FormTemplate "formField" }}
                                 {{ template "formField" . }}
