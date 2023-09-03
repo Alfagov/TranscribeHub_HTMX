@@ -15,7 +15,7 @@ type UserFormField struct {
 var RegisterFields = []UserFormField{
 	{
 		FormTemplate: "formField",
-		Id:           "rUsername",
+		Id:           "Username",
 		LabelText:    "Username",
 		Type:         "text",
 		Name:         "username",
@@ -24,7 +24,7 @@ var RegisterFields = []UserFormField{
 	},
 	{
 		FormTemplate: "formField",
-		Id:           "rEmail",
+		Id:           "Email",
 		LabelText:    "Your email",
 		Type:         "email",
 		Name:         "email",
@@ -33,7 +33,7 @@ var RegisterFields = []UserFormField{
 	},
 	{
 		FormTemplate: "formField",
-		Id:           "rPassword",
+		Id:           "Password",
 		LabelText:    "Your password",
 		Type:         "password",
 		Name:         "password",
@@ -45,7 +45,7 @@ var RegisterFields = []UserFormField{
 var LoginFields = []UserFormField{
 	{
 		FormTemplate: "formField",
-		Id:           "rEmail",
+		Id:           "Email",
 		LabelText:    "Your email",
 		Type:         "email",
 		Name:         "email",
@@ -54,7 +54,7 @@ var LoginFields = []UserFormField{
 	},
 	{
 		FormTemplate: "formFieldNoValidation",
-		Id:           "rPassword",
+		Id:           "Password",
 		LabelText:    "Your password",
 		Type:         "password",
 		Name:         "password",

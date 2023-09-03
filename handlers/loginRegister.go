@@ -13,15 +13,13 @@ func LoginUserHandler(db database.Dao) gin.HandlerFunc {
 		var user models.LoginUser
 		err := c.ShouldBind(&user)
 		if err != nil {
-			log.Println("LOGIN ERROR", err)
-			c.HTML(200, "", gin.H{})
+			FormErrorResponse(c, err, "REQ ERROR")
 			return
 		}
 
 		dbUser, err := db.LoginUser(user)
 		if err != nil {
-			c.HTML(200, "", gin.H{})
-			log.Println("LOGIN ERROR", err)
+			FormErrorResponse(c, err, "DB ERROR")
 			return
 		}
 
@@ -52,7 +50,7 @@ func RegisterUserHandler(db database.Dao) gin.HandlerFunc {
 		var user models.RegisterUser
 		err := c.ShouldBind(&user)
 		if err != nil {
-			c.HTML(200, "", gin.H{})
+			FormErrorResponse(c, err, "REQ ERROR")
 			return
 		}
 
@@ -61,9 +59,19 @@ func RegisterUserHandler(db database.Dao) gin.HandlerFunc {
 
 		err = db.RegisterUser(user)
 		if err != nil {
-			c.HTML(200, "", gin.H{})
+			FormErrorResponse(c, err, "DB ERROR")
 			return
 		}
 		c.HTML(200, "registeredModal.html", gin.H{})
 	}
+}
+
+func FormErrorResponse(c *gin.Context, err error, errType string) {
+	c.Header("HX-Retarget", "#register-button-container")
+	c.Header("HX-Reswap", "outerHTML")
+	c.HTML(200, "error-form-submit", gin.H{
+		"errorTitle": errType,
+		"errorText":  err.Error(),
+	})
+	log.Println("REGISTER ERROR", err)
 }
