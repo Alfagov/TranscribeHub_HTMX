@@ -4,13 +4,21 @@ module.exports = {
     darkMode: 'media',
     content: [
         "./templates/*.html",
+        "./templates/**/*.html",
         "./node_modules/flowbite/**/*.js",
     ],
     theme: {
         extend: {},
     },
+    daisyui: {
+      themes: [
+          "light",
+          "dark",
+          "night",
+      ]
+    },
     plugins: [
-        require("flowbite/plugin"),
+        require("daisyui"),
         plugin(function ({addVariant}) {
             addVariant('htmx-settling', ['&.htmx-settling', '.htmx-settling &'])
             addVariant('htmx-request', ['&.htmx-request', '.htmx-request &'])

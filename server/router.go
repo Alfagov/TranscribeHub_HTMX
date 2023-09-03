@@ -14,7 +14,7 @@ func newRouter(db database.Dao) *gin.Engine {
 
 	router.Use(cors.Default())
 
-	router.LoadHTMLGlob("./templates/*")
+	router.LoadHTMLGlob("./templates/**/*")
 
 	addStaticRoutes(router)
 	addPageRoutes(router)
@@ -42,11 +42,47 @@ func addPageRoutes(engine *gin.Engine) {
 		if c.GetBool("logged_in") {
 			c.HTML(200, "grid-page", gin.H{
 				"IsAuthenticated": c.GetBool("logged_in"),
+				"Counters": []struct {
+					Text  string
+					Value int
+					Max   int
+				}{
+					{Text: "Transcriptions",
+						Value: 7,
+						Max:   10},
+					{
+						Text:  "Transcriptions",
+						Value: 3,
+						Max:   10,
+					},
+					{
+						Text:  "Transcriptions",
+						Value: 40,
+					},
+				},
 			})
 			return
 		}
 		c.HTML(200, "landing-page", gin.H{
 			"IsAuthenticated": c.GetBool("logged_in"),
+			"Counters": []struct {
+				Text  string
+				Value int
+				Max   int
+			}{
+				{Text: "Transcriptions",
+					Value: 7,
+					Max:   10},
+				{
+					Text:  "Transcriptions",
+					Value: 3,
+					Max:   10,
+				},
+				{
+					Text:  "Transcriptions",
+					Value: 40,
+				},
+			},
 		})
 	})
 }
