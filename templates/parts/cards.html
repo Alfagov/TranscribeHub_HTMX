@@ -1,56 +1,70 @@
 {{ block "new-project-card" . }}
-    <div class="p-4 rounded-lg border-2 border-gray-200 mr-2 ml-2 border-dashed dark:border-gray-700 ">
-        <a href="#"
-           class="group block max-w-xs mx-auto rounded-lg p-6 ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500">
-            <div class="flex items-center space-x-3">
-                <svg class="h-6 w-6 stroke-sky-500 group-hover:stroke-white" fill="none"
-                     viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M11 19H6.931A1.922 1.922 0 015 17.087V8h12.069C18.135 8 19 8.857 19 9.913V11"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M14 7.64L13.042 6c-.36-.616-1.053-1-1.806-1H7.057C5.921 5 5 5.86 5 6.92V11M17 15v4M19 17h-4"></path>
-                </svg>
-                <h3 class="text-white group-hover:text-white text-sm font-semibold">New
-                    project</h3>
-            </div>
-            <p class="text-gray-200 group-hover:text-white text-sm">Create a new project from a
+    <div class="card shadow-xl bg-primary-content max-w-xs mx-auto m-4 mr-4">
+        <div class="card-body">
+            <h2 class="card-title text-primary pb-2">Create new project</h2>
+            <p class="pb-4">Create a new project from a
                 variety of starting templates.</p>
-        </a>
+            <a href="#"
+               class="group block bg-base-200 max-w-xs mx-auto rounded-lg p-6 ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-primary hover:ring-sky-500">
+                <div class="flex items-center space-x-3">
+                    <svg class="h-6 w-6 stroke-primary group-hover:stroke-neutral" fill="none"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M11 19H6.931A1.922 1.922 0 015 17.087V8h12.069C18.135 8 19 8.857 19 9.913V11"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M14 7.64L13.042 6c-.36-.616-1.053-1-1.806-1H7.057C5.921 5 5 5.86 5 6.92V11M17 15v4M19 17h-4"></path>
+                    </svg>
+                    <h3 class="font-semibold">New
+                        project</h3>
+                </div>
+            </a>
+        </div>
+
     </div>
 {{ end }}
 {{ block "resume-editor-card" . }}
-    <div class="p-4 rounded-lg border-2 border-gray-200 mr-2 ml-2 border-dashed dark:border-gray-700 ">
-        <a href="#"
-           class="group block max-w-xs mx-auto rounded-lg p-6 ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500">
-            <div class="flex items-center space-x-3">
-                <svg class="h-6 w-6 stroke-sky-500 group-hover:stroke-white" fill="none"
-                     viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M3.04995 2.74995C3.04995 2.44619 2.80371 2.19995 2.49995 2.19995C2.19619 2.19995 1.94995 2.44619 1.94995 2.74995V12.25C1.94995 12.5537 2.19619 12.8 2.49995 12.8C2.80371 12.8 3.04995 12.5537 3.04995 12.25V2.74995ZM5.73333 2.30776C5.57835 2.22596 5.39185 2.23127 5.24177 2.32176C5.0917 2.41225 4.99995 2.57471 4.99995 2.74995V12.25C4.99995 12.4252 5.0917 12.5877 5.24177 12.6781C5.39185 12.7686 5.57835 12.7739 5.73333 12.6921L14.7333 7.94214C14.8973 7.85559 15 7.68539 15 7.49995C15 7.31452 14.8973 7.14431 14.7333 7.05776L5.73333 2.30776ZM5.99995 11.4207V3.5792L13.4287 7.49995L5.99995 11.4207Z"
-                          fill="currentColor"/>
-                </svg>
-                <h3 class="text-white group-hover:text-white text-sm font-semibold">Resume
-                    Editor</h3>
-            </div>
-            <p class="text-gray-200 group-hover:text-white text-sm">Create a new project from a
+    <div class="card shadow-xl bg-primary-content max-w-xs mx-auto m-4 ml-4 mr-4">
+        <div class="card-body">
+            <h2 class="card-title text-primary pb-2">Resume
+                Editor</h2>
+            <p class="pb-4">Create a new project from a
                 variety of starting templates.</p>
-        </a>
+            <a href="#"
+               class="group block bg-base-200 max-w-xs mx-auto rounded-lg p-6 ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-primary hover:ring-sky-500">
+                <div class="flex items-center space-x-3">
+                    <svg class="h-6 w-6 stroke-sky-500 group-hover:stroke-white" fill="none"
+                         viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M3.04995 2.74995C3.04995 2.44619 2.80371 2.19995 2.49995 2.19995C2.19619 2.19995 1.94995 2.44619 1.94995 2.74995V12.25C1.94995 12.5537 2.19619 12.8 2.49995 12.8C2.80371 12.8 3.04995 12.5537 3.04995 12.25V2.74995ZM5.73333 2.30776C5.57835 2.22596 5.39185 2.23127 5.24177 2.32176C5.0917 2.41225 4.99995 2.57471 4.99995 2.74995V12.25C4.99995 12.4252 5.0917 12.5877 5.24177 12.6781C5.39185 12.7686 5.57835 12.7739 5.73333 12.6921L14.7333 7.94214C14.8973 7.85559 15 7.68539 15 7.49995C15 7.31452 14.8973 7.14431 14.7333 7.05776L5.73333 2.30776ZM5.99995 11.4207V3.5792L13.4287 7.49995L5.99995 11.4207Z"
+                              fill="currentColor"/>
+                    </svg>
+                    <h3 class="font-semibold">New
+                        project</h3>
+                </div>
+            </a>
+        </div>
+
     </div>
 {{ end }}
 {{ block "browse-project-card" . }}
-    <div class="p-4 rounded-lg border-2 border-gray-200 mr-2 ml-2 border-dashed dark:border-gray-700 ">
-        <a href="#"
-           class="group block max-w-xs mx-auto rounded-lg p-6 ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-sky-500 hover:ring-sky-500">
-            <div class="flex items-center space-x-3">
-                <svg class="h-6 w-6 stroke-sky-500 group-hover:stroke-white" fill="none"
-                     viewBox="0 0 20 20">
-                    <path d="M17.927,5.828h-4.41l-1.929-1.961c-0.078-0.079-0.186-0.125-0.297-0.125H4.159c-0.229,0-0.417,0.188-0.417,0.417v1.669H2.073c-0.229,0-0.417,0.188-0.417,0.417v9.596c0,0.229,0.188,0.417,0.417,0.417h15.854c0.229,0,0.417-0.188,0.417-0.417V6.245C18.344,6.016,18.156,5.828,17.927,5.828 M4.577,4.577h6.539l1.231,1.251h-7.77V4.577z M17.51,15.424H2.491V6.663H17.51V15.424z"></path>
-                </svg>
-                <h3 class="text-white group-hover:text-white text-sm font-semibold">Browse
-                    Projects</h3>
-            </div>
-            <p class="text-gray-200 group-hover:text-white text-sm">Create a new project from a
+    <div class="card shadow-xl bg-primary-content max-w-xs mx-auto m-4 ml-4">
+        <div class="card-body">
+            <h2 class="card-title text-primary pb-2">Browse
+                Projects</h2>
+            <p class="pb-4">Create a new project from a
                 variety of starting templates.</p>
-        </a>
+            <a href="#"
+               class="group block bg-base-200 max-w-xs mx-auto rounded-lg p-6 ring-1 ring-slate-900/5 shadow-lg space-y-3 hover:bg-primary hover:ring-sky-500">
+                <div class="flex items-center space-x-3">
+                    <svg class="h-6 w-6 stroke-sky-500 group-hover:stroke-white" fill="none"
+                         viewBox="0 0 20 20">
+                        <path d="M17.927,5.828h-4.41l-1.929-1.961c-0.078-0.079-0.186-0.125-0.297-0.125H4.159c-0.229,0-0.417,0.188-0.417,0.417v1.669H2.073c-0.229,0-0.417,0.188-0.417,0.417v9.596c0,0.229,0.188,0.417,0.417,0.417h15.854c0.229,0,0.417-0.188,0.417-0.417V6.245C18.344,6.016,18.156,5.828,17.927,5.828 M4.577,4.577h6.539l1.231,1.251h-7.77V4.577z M17.51,15.424H2.491V6.663H17.51V15.424z"></path>
+                    </svg>
+                    <h3 class="font-semibold">New
+                        project</h3>
+                </div>
+            </a>
+        </div>
+
     </div>
 {{ end }}

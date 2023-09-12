@@ -1,8 +1,8 @@
 {{ block "line-counter" . }}
     <div class="p-1">
         <div class="flex justify-between mb-0">
-            <span class="text-base font-medium text-blue-700 dark:text-white">{{ .Text }}</span>
-            <span class="text-sm font-medium text-blue-700 dark:text-white">{{ .Value }}/{{ .Max }}</span>
+            <span class="text-base font-medium text-neutral-content">{{ .Text }}</span>
+            <span class="text-sm font-medium text-neutral-content">{{ .Value }}/{{ .Max }}</span>
         </div>
         <progress class="progress {{ .ProgressClass }} h-2.5" value="{{ .Value }}" max="{{ .Max }}"></progress>
     </div>
@@ -10,8 +10,8 @@
 {{ block "line-counter-perc" . }}
     <div class="p-1">
         <div class="flex justify-between mb-0">
-            <span class="text-base font-medium text-blue-700 dark:text-white">{{ .Text }}</span>
-            <span class="text-sm font-medium text-blue-700 dark:text-white">{{ .Value }}%</span>
+            <span class="text-base font-medium text-neutral-content">{{ .Text }}</span>
+            <span class="text-sm font-medium text-neutral-content">{{ .Value }}%</span>
         </div>
         <progress class="progress {{ .ProgressClass }} h-2.5" value="{{ .Value }}" max="100"></progress>
     </div>

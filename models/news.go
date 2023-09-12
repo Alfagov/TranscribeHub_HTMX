@@ -3,10 +3,11 @@ package models
 import "html/template"
 
 type News struct {
-	SvgNotification template.HTML
-	Title           string
-	Date            string
-	Text            string
-	DownloadLink    string
-	DownloadText    string
+	Id              string        `json:"id,omitempty"`
+	SvgNotification template.HTML `json:"svgNotification,omitempty"`
+	Title           string        `json:"title,omitempty"`
+	Date            string        `json:"date,omitempty"`
+	Text            string        `json:"text,omitempty"`
+	DownloadLink    string        `json:"downloadLink,omitempty"`
+	DownloadText    string        `json:"downloadText,omitempty"`
 }

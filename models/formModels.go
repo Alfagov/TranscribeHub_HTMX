@@ -12,6 +12,68 @@ type UserFormField struct {
 	Error        string
 }
 
+type PricingCard struct {
+	Title       string
+	Description string
+	Price       string
+	Elements    []PricingCardElement
+}
+
+type PricingCardElement struct {
+	Text string
+}
+
+var PricingCards = []PricingCard{
+	{
+		Title:       "Starter",
+		Description: "Best option for personal use & for your next project.",
+		Price:       "$40",
+		Elements: []PricingCardElement{
+			{
+				Text: "Invalid configuration",
+			},
+			{
+				Text: "No setup, or hidden fees",
+			},
+			{
+				Text: "Team size: 5",
+			},
+		},
+	},
+	{
+		Title:       "Company",
+		Description: "Relevant for multiple users, extended & premium support.",
+		Price:       "$99",
+		Elements: []PricingCardElement{
+			{
+				Text: "Invalid configuration",
+			},
+			{
+				Text: "No setup, or hidden fees",
+			},
+			{
+				Text: "Team size: 5",
+			},
+		},
+	},
+	{
+		Title:       "Enterprise",
+		Description: "Best for large scale uses and extended redistribution rights.",
+		Price:       "$499",
+		Elements: []PricingCardElement{
+			{
+				Text: "Invalid configuration",
+			},
+			{
+				Text: "No setup, or hidden fees",
+			},
+			{
+				Text: "Team size: 5",
+			},
+		},
+	},
+}
+
 var RegisterFields = []UserFormField{
 	{
 		FormTemplate: "formField",

@@ -24,10 +24,13 @@ func LoginUserHandler(db database.Dao) gin.HandlerFunc {
 		}
 
 		c.Header("HX-Trigger", "loggedInEvent")
+		c.Header("HX-Push-Url", "/dashboard")
 		c.SetCookie("Authentication", dbUser.Id, 3600, "/", "localhost", false, true)
-		c.HTML(200, "sidebar-inner", gin.H{
-			"IsAuthenticated": true,
-			"NotPremium":      true,
+		c.HTML(200, "sidebar-inner-new", gin.H{
+			"IsAuthenticated":   true,
+			"NotPremium":        true,
+			"DashboardSelected": true,
+			"DashboardActive":   "active",
 		})
 
 		log.Println("LOGIN USER", dbUser)
@@ -38,8 +41,10 @@ func LogoutUserHandler(db database.Dao) gin.HandlerFunc {
 	return func(c *gin.Context) {
 
 		c.SetCookie("Authentication", "", -1, "/", "localhost", false, true)
-		c.HTML(200, "sidebar-header", gin.H{
+		c.Header("HX-Push-Url", "/")
+		c.HTML(200, "sidebar-header-new", gin.H{
 			"IsAuthenticated": false,
+			"HomeActive":      "active",
 		})
 
 	}

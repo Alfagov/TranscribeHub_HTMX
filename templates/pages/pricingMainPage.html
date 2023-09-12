@@ -1,4 +1,4 @@
-{{ define "pages/mainPage.html" }}
+{{ define "pages/pricingMainPage.html" }}
     <!DOCTYPE html>
     <html lang="en" data-theme="night">
     <head>
@@ -23,9 +23,7 @@
                 {{ if .IsAuthenticated }}
                     {{ template "grid-page-ui" . }}
                 {{ else }}
-                    {{ block "landing-page" . }}
-                        {{ template "landing-header" . }}
-                    {{ end }}
+                        {{ template "pages/pricing.html" . }}
                 {{ end }}
 
             </div>
@@ -41,4 +39,3 @@
     </body>
     </html>
 {{ end }}
-

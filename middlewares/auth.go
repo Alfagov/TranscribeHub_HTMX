@@ -11,6 +11,7 @@ func AuthMiddleware() gin.HandlerFunc {
 			return
 		}
 		c.Set("logged_in", true)
+		c.Set("user_id", token)
 		c.Next()
 	}
 }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/e68114bb-b91d-4fe6-9cf7-0847e74d5ddd/console.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/database/dbInterface.go" dialect="PostgreSQL" />
   </component>
 </project>
